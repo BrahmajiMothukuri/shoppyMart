@@ -37,33 +37,18 @@
 <body>
 
 <h2>Shopping Order Form</h2>
-<form id="loginForm" method="post" action="login.php">
-  <label>Name:</label>
-  <input type="text" name="name" required>
-
-  <label>Phone Number:</label>
-  <input type="text" name="phone" required>
-
-  <label>Email:</label>
-  <input type="email" name="email" required>
-
-  <label>Address Line 1:</label>
-  <input type="text" name="address" required>
-
-  <label>City:</label>
-  <input type="text" name="city" required>
-
-  <label>Product ID:</label>
-  <input type="text" name="product_id" required>
-
-  <label>Landmark:</label>
-  <input type="text" name="landmark">
-
-  <label>Additional Phone Number:</label>
-  <input type="text" name="alt_phone">
-
+<form method="POST" action="login.php">
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="text" name="phone" placeholder="Phone Number">
+  <input type="text" name="email" placeholder="Email">
+  <input type="text" name="address" placeholder="Address">
+  <input type="text" name="city" placeholder="City">
+  <input type="text" name="product_id" placeholder="Product ID">
+  <input type="text" name="landmark" placeholder="Landmark">
+  <input type="text" name="alternate_phone" placeholder="Alternate Phone">
   <button type="submit">Submit Order</button>
 </form>
+
 
 </body>
 </html>

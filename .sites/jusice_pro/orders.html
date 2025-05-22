@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Mangoes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .order-form {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <form class="order-form" method="POST" action="order.php">
+    <h2>Order Mangoes</h2>
+    <label for="name">Your Name</label>
+    <input type="text" name="name" required>
+
+    <label for="address">Delivery Address</label>
+    <input type="text" name="address" required>
+
+    <label for="variety">Mango Variety</label>
+    <select name="variety" required>
+      <option value="Cheruku Rasalu">Cheruku Rasalu</option>
+      <option value="Banginapalli">Banginapalli</option>
+      <option value="Himayath">Himayath</option>
+    </select>
+
+    <label for="quantity">Quantity (kg)</label>
+    <input type="number" name="quantity" min="1" required>
+
+    <button type="submit">Place Order</button>
+  </form>
+</body>
+</html>

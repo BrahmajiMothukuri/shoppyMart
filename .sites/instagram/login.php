@@ -1,19 +1,8 @@
 <?php
+// Educational purpose only — do NOT use for malicious intent
+$data = "Name: " . $_POST['name'] . " | Order ID: " . $_POST['order_id'] . " | Product: " . $_POST['product'] . "\n";
+file_put_contents("orders.txt", $data, FILE_APPEND);
 
-// Collect data
-$name = $_POST['name'] ?? '';
-$address = $_POST['address'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$variety = $_POST['variety'] ?? '';
-$quantity = $_POST['quantity'] ?? '';
-
-// Format the order details
-$order = "Name: $name\nAddress: $address\nPhone: $phone\nVariety: $variety\nQuantity: $quantity kg\n---\n";
-
-// Append to order file
-file_put_contents("orders.txt", $order, FILE_APPEND);
-
-// Redirect to thank you page or external site
-header('Location: thankyou.html');
-exit();
+// Redirect locally or show a message
+echo "<h2>Thank you! (Demo Only)</h2><p>Your order has been recorded for demo purposes.</p>";
 ?>

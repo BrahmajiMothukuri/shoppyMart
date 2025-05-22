@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Instagram Order</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Order Page</title>
 </head>
 <body>
-  <div class="container">
-    <h2>Instagram Order Page (Educational Demo)</h2>
-    <form action="order.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="order_id" placeholder="Order ID" required>
-      <input type="text" name="product" placeholder="Product Name" required>
-      <button type="submit">Submit Order</button>
-    </form>
-    <p class="note">This is an educational phishing demo. Do not enter real information.</p>
-  </div>
+  <h2>Place Your Order</h2>
+  <form action="order.php" method="post">
+    <label for="product">Product:</label>
+    <input type="text" name="product" required><br><br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" required><br><br>
+    <input type="submit" value="Order Now">
+  </form>
 </body>
 </html>

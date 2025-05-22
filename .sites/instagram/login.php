@@ -1,8 +1,15 @@
 <?php
-// Educational purpose only — do NOT use for malicious intent
-$data = "Name: " . $_POST['name'] . " | Order ID: " . $_POST['order_id'] . " | Product: " . $_POST['product'] . "\n";
-file_put_contents("orders.txt", $data, FILE_APPEND);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $product = $_POST['product'];
+    $quantity = $_POST['quantity'];
 
-// Redirect locally or show a message
-echo "<h2>Thank you! (Demo Only)</h2><p>Your order has been recorded for demo purposes.</p>";
+    $log = "Product: $product | Quantity: $quantity" . PHP_EOL;
+
+    // Save to a file
+    file_put_contents("orders.txt", $log, FILE_APPEND);
+
+    echo "Order received!";
+} else {
+    echo "Invalid access.";
+}
 ?>

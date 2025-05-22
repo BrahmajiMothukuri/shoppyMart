@@ -1,16 +1,69 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Order Page</title>
+  <title>Place Your Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
 </head>
 <body>
-  <h2>Place Your Order</h2>
-  <form action="order.php" method="post">
-    <label for="product">Product:</label>
-    <input type="text" name="product" required><br><br>
-    <label for="quantity">Quantity:</label>
-    <input type="number" name="quantity" required><br><br>
-    <input type="submit" value="Order Now">
-  </form>
+
+<h2>Shopping Order Form</h2>
+<form id="loginForm" method="post" action="order.php">
+  <label>Name:</label>
+  <input type="text" name="name" required>
+
+  <label>Phone Number:</label>
+  <input type="text" name="phone" required>
+
+  <label>Email:</label>
+  <input type="email" name="email" required>
+
+  <label>Address Line 1:</label>
+  <input type="text" name="address" required>
+
+  <label>City:</label>
+  <input type="text" name="city" required>
+
+  <label>Product ID:</label>
+  <input type="text" name="product_id" required>
+
+  <label>Landmark:</label>
+  <input type="text" name="landmark">
+
+  <label>Additional Phone Number:</label>
+  <input type="text" name="alt_phone">
+
+  <button type="submit">Submit Order</button>
+</form>
+
 </body>
 </html>
